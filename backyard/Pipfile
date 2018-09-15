@@ -11,6 +11,9 @@ djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
 neovim = "*"
+werkzeug = "*"
+"psycopg2-binary" = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
