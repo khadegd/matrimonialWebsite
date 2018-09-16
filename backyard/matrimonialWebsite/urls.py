@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('human.urls')),
     path('admin/', admin.site.urls),
 ]
 
@@ -32,4 +33,4 @@ if settings.DEBUG:
 # Admin Site Config
 admin.sites.AdminSite.site_header = 'Matrimonial Website'
 admin.sites.AdminSite.site_title = 'Welcome to admin area of '+str(admin.sites.AdminSite.site_header)
-admin.sites.AdminSite.index_title ='My site admin index'
+admin.sites.AdminSite.index_title = admin.sites.AdminSite.site_title
