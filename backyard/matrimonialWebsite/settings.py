@@ -46,12 +46,20 @@ INSTALLED_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'django_extensions'
+    'django_extensions',
+    'rest_framework',
+    'debug_toolbar'
 ]
 
-INSTALLED_APPS += THIRD_PARTY_APPS
+DEVELOPED_APPS = [
+    'human'
+]
+
+INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS + DEVELOPED_APPS
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,6 +123,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'human.User'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'human.auth.EmailBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

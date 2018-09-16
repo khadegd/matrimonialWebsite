@@ -14,6 +14,7 @@ neovim = "*"
 werkzeug = "*"
 "psycopg2-binary" = "*"
 python-dotenv = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
