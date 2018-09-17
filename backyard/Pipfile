@@ -16,6 +16,8 @@ werkzeug = "*"
 python-dotenv = "*"
 django-debug-toolbar = "*"
 djangorestframework-simplejwt = "*"
+coreapi-cli = "*"
+django-phonenumber-field = "*"
 
 [dev-packages]
 

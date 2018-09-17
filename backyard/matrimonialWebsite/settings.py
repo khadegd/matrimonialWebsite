@@ -48,7 +48,8 @@ INSTALLED_APPS = [
 THIRD_PARTY_APPS = [
     'django_extensions',
     'rest_framework',
-    'debug_toolbar'
+    'debug_toolbar',
+    'phonenumber_field',
 ]
 
 DEVELOPED_APPS = [
