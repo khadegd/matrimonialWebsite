@@ -18,6 +18,7 @@ django-debug-toolbar = "*"
 djangorestframework-simplejwt = "*"
 coreapi-cli = "*"
 django-phonenumber-field = "*"
+pgcli = "*"
 
 [dev-packages]
 
