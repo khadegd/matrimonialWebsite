@@ -19,6 +19,7 @@ djangorestframework-simplejwt = "*"
 coreapi-cli = "*"
 django-phonenumber-field = "*"
 pgcli = "*"
+djoser = "*"
 
 [dev-packages]
 

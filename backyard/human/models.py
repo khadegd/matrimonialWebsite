@@ -10,6 +10,7 @@ class User(AbstractUser):
     contact = PhoneNumberField(_('contact number'), blank=False, unique=True,
             help_text=('Required. Use +country_code-contact. '
             'e.g. +91-7218000000'))
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'contact']
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,

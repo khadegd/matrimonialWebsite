@@ -20,14 +20,18 @@ from django.urls import include, path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
+    TokenVerifyView,
 )
 
 api_urls = [
     path('v1/', include('human.urls')),
 
+    path('', include('djoser.urls')),
+
     # JWT Authentication
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('jwt/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('jwt/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('jwt/verify/', TokenVerifyView.as_view(), name='token_verify'),
 ]
 urlpatterns = [
     path('api/', include(api_urls)),
