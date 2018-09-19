@@ -16,12 +16,23 @@ class UserAdmin(BaseUserAdmin):
     fieldsets = BaseUserAdmin.fieldsets
     fieldsets[1][1]['fields'] += ('contact', )
 
+
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
             'fields': ('username', 'email', 'contact', 'password1', 'password2')}
         ),
     )
-    
+
+    def get_fieldsets(self, request, obj=None):
+        if not request.user.is_superuser:
+            fieldsets_as_list = list(self.fieldsets)
+            del fieldsets_as_list[2]
+            staff_fieldsets = tuple(fieldsets_as_list)
+            del fieldsets_as_list
+
+            return staff_fieldsets
+        else:
+            return super(UserAdmin, self).get_fieldsets(request, obj)
 
 admin.site.register(UserModel, UserAdmin)

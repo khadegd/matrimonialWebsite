@@ -1,4 +1,4 @@
-# Project Title
+# Matrimonial Website
 
 One Paragraph of project description goes here
 
@@ -72,7 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ganesh Khade** - *Initial work* - [matrimonialWebsite](https://github.com/isgk/matrimonailWebsite)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

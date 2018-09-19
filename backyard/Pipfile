@@ -12,14 +12,15 @@ markdown = "*"
 django-filter = "*"
 neovim = "*"
 werkzeug = "*"
-"psycopg2-binary" = "*"
 python-dotenv = "*"
 django-debug-toolbar = "*"
 djangorestframework-simplejwt = "*"
 coreapi-cli = "*"
 django-phonenumber-field = "*"
-pgcli = "*"
 djoser = "*"
+"psycopg2" = "*"
+"psycopg2-binary" = "*"
+pgcli = "*"
 
 [dev-packages]
 
